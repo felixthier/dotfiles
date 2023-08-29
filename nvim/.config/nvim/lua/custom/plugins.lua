@@ -116,10 +116,7 @@ local plugins = {
     ignore_blank_lines = true, -- ignore blank lines when sending visual select lines
   })
     end,
-  }
-
-
-
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
