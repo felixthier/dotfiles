@@ -2,21 +2,17 @@
 	email = felixthier@github.com
 	name = Felix Thierfelder
 [safe]
-	directory = /home/felix/home/felix
 	directory = /home/felix/home/felix/NGS/zsg_dashboard
-	directory = /home/felix
 	directory = /home/felix/NGS/zsg_dashboard
 	directory = /home/felix/NGS/zsg_dashboard/master
 	directory = /home/felix/NGS/zsg_dashboard/test
 	directory = /home/felix/projects/bcc
-	directory = /home/felix/projects
 	directory = /home/felix/projects/maldi_report
 	directory = /home/felix/projects/mole_dashboard/
 	directory = /home/felix/projects/mole_dashboard
 	directory = /home/felix/projects/testing/mole_dashboard/
 	directory = /home/felix/projects/testing/mole_dashboard
 	directory = /home/felix/projects/testing/beta/mole_dashboard
-	directory = .
 	directory = /home/felix/projects/testing/backup/main/mole_dashboard
 	directory = /home/felix/projects/testing/backup/restructure/mole_dashboard
 	directory = /home/felix/NGS/scripts
@@ -25,4 +21,7 @@
 	directory = /home/felix/projects/testing/md_nipt_barcode
 	directory = /home/felix/projects/testing/md_maldi
 	directory = /home/felix/projects/testing/ngs_blanko
-	directory = /home/felix/projects/testing/mole_dashboard_backup
+  directory = /home/felix/projects/testing/mole_dashboard_backup
+[core]
+  editor = nvim
+
