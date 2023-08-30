@@ -41,7 +41,8 @@ M.mason = {
     "debugpy",
     "mypy",
     "ruff",
-    "pyright"
+    "pyright",
+    "bash-language-server",
   },
 }
 
