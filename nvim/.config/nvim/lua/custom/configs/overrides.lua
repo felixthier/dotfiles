@@ -38,10 +38,14 @@ M.mason = {
     "clangd",
     "clang-format",
     "black",
+
+    -- python
     "debugpy",
     "mypy",
     "ruff",
     "pyright",
+
+    -- bash
     "bash-language-server",
   },
 }
