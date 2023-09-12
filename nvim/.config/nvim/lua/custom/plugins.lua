@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -25,7 +25,7 @@ local plugins = {
   -- override plugin configs
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
 
   {
@@ -64,59 +64,59 @@ local plugins = {
     opts = {
       sources = {
         { name = "nvim_lsp", group_index = 2 },
-        { name = "copilot",  group_index = 2 },
-        { name = "luasnip",  group_index = 2 },
-        { name = "buffer",   group_index = 2 },
+        { name = "copilot", group_index = 2 },
+        { name = "luasnip", group_index = 2 },
+        { name = "buffer", group_index = 2 },
         { name = "nvim_lua", group_index = 2 },
-        { name = "path",     group_index = 2 },
+        { name = "path", group_index = 2 },
       },
     },
   },
---  {
---    "Vigemus/iron.nvim",
---    event = "InsertEnter",
---    config = function()
---      require("iron.core").setup({
---        config = {
---          -- Whether a repl should be discarded or not
---          scratch_repl = true,
---          -- Your repl definitions come here
---          repl_definition = {
---            python = {
---              command = {"ipython"},
---              format = require("iron.fts.common").bracketed_paste,
---            },
---          },
---          -- How the repl window will be displayed
---          -- See below for more information
---          repl_open_cmd = "vertical botright 80 split",
---        },
---        -- Iron doesn't set keymaps by default anymore.
---        -- You can set them here or manually add keymaps to the functions in iron.core
---        keymaps = {
---          send_motion = "<space>sc",
---          visual_send = "<space>sc",
---          send_file = "<space>sf",
---          send_line = "<space>sl",
---          send_until_cursor = "<space>su",
---          send_mark = "<space>sm",
---          mark_motion = "<space>mc",
---          mark_visual = "<space>mc",
---          remove_mark = "<space>md",
---          cr = "<space>s<cr>",
---          interrupt = "<space>s<space>",
---          exit = "<space>sq",
---          clear = "<space>cl",
---        },
---        -- If the highlight is on, you can change how it looks
---        -- For the available options, check nvim_set_hl
---        highlight = {
---          italic = true
---        },
---    ignore_blank_lines = true, -- ignore blank lines when sending visual select lines
---  })
---    end,
---  },
+  --  {
+  --    "Vigemus/iron.nvim",
+  --    event = "InsertEnter",
+  --    config = function()
+  --      require("iron.core").setup({
+  --        config = {
+  --          -- Whether a repl should be discarded or not
+  --          scratch_repl = true,
+  --          -- Your repl definitions come here
+  --          repl_definition = {
+  --            python = {
+  --              command = {"ipython"},
+  --              format = require("iron.fts.common").bracketed_paste,
+  --            },
+  --          },
+  --          -- How the repl window will be displayed
+  --          -- See below for more information
+  --          repl_open_cmd = "vertical botright 80 split",
+  --        },
+  --        -- Iron doesn't set keymaps by default anymore.
+  --        -- You can set them here or manually add keymaps to the functions in iron.core
+  --        keymaps = {
+  --          send_motion = "<space>sc",
+  --          visual_send = "<space>sc",
+  --          send_file = "<space>sf",
+  --          send_line = "<space>sl",
+  --          send_until_cursor = "<space>su",
+  --          send_mark = "<space>sm",
+  --          mark_motion = "<space>mc",
+  --          mark_visual = "<space>mc",
+  --          remove_mark = "<space>md",
+  --          cr = "<space>s<cr>",
+  --          interrupt = "<space>s<space>",
+  --          exit = "<space>sq",
+  --          clear = "<space>cl",
+  --        },
+  --        -- If the highlight is on, you can change how it looks
+  --        -- For the available options, check nvim_set_hl
+  --        highlight = {
+  --          italic = true
+  --        },
+  --    ignore_blank_lines = true, -- ignore blank lines when sending visual select lines
+  --  })
+  --    end,
+  --  },
 
   -- To make a plugin not be loaded
   -- {

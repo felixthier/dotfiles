@@ -1,7 +1,4 @@
--- local autocmd = vim.api.nvim_create_autocmd
-
--- Auto resize panes when resizing nvim window
--- autocmd("VimResized", {
---   pattern = "*",
---   command = "tabdo wincmd =",
--- })
+vim.keymap.set("n", "<space>fe", vim.diagnostic.open_float)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
