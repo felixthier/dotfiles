@@ -88,4 +88,5 @@ M.copilot = {
     enable = false,
   },
 }
+
 return M

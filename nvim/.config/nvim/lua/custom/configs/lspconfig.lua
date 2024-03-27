@@ -5,7 +5,7 @@ local lspconfig = require "lspconfig"
 
 local py_path = "/home/felix/miniconda3/bin/python"
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd" }
+local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -68,6 +68,25 @@ lspconfig.pylsp.setup {
     },
     flags = {
       debounce_text_changes = 200,
+    },
+  },
+}
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    ["rust-analyzer"] = {
+      checkOnSave = {
+        allFeatures = true,
+        overrideCommand = {
+          "cargo",
+          "clippy",
+          "--workspace",
+          "--message-format=json",
+          "--all-targets",
+          "--all-features",
+        },
+      },
     },
   },
 }

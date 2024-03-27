@@ -22,6 +22,14 @@ local plugins = {
     end, -- Override to setup mason-lspconfig
   },
 
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^4", -- Recommended
+    ft = { "rust", "rs" },
+    -- config = function()
+    --   require "custom.configs.rustaceanvim"
+    -- end,
+  },
   -- override plugin configs
   {
     "williamboman/mason.nvim",
@@ -71,6 +79,9 @@ local plugins = {
         { name = "path", group_index = 2 },
       },
     },
+  },
+  {
+    "theprimeagen/harpoon",
   },
   --  {
   --    "Vigemus/iron.nvim",
